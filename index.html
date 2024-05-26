@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3d0758264a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div>
+                <h2> Firkeyohannes </h2>
+            </div>    
+            <ul>
+            
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h1>Hi, I'm <span>Fikreyohannes</span>,website developer.</h1>
+    </section>
+
+     <div id="about">
+      
+        <div class="container">
+        <div class= "row">
+            <div class="about-col-2">
+        <h2 class="sub-title">About Me</h2>
+        <p class="phrase">I am a student at AASTU sofwate engineering department. I aspire to be a web developer. Both front-end and back-end.</p>
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <i class="fa-solid fa-laptop-code"></i>
+                <li><span>web front-end</span><br> HTML,css and javascript</li>
+                <li><span>web back-end</span><br> PHP, javascript</li>
+            </ul>
+        </div>
+         <div class="tab-contents" id="education">
+            <ul>
+                <i class="fa-solid fa-school"></i>
+                <li><span>AASTU student</span><br> Software engineering</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="about-col-1">
+        <img src="image1.jpg">
+    </div>
+</div>
+</div>
+</div>
+  
+
+    <div id="projects">
+    <div class="container">
+        <h2 class= "sub-title">Projects</h2>
+        <div class="project-list">
+            <div class="project">
+            <img src="work1.jpg">
+        </div>
+        <div class="project">
+             <img src="work2.jpg">
+        </div>
+    </div>
+</div>
+</div>
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>fikreyohannes3353@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0933534195</p>
+                <div class= "social-icons">
+                    <a href="https://instagram.com/fikreyohannes_21"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/jovan_west"><i class="fa-brands fa-telegram"></i></a>
+                    
+                </div>
+                <a href="my-cv.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input tupe="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn">Submit</button>
+                </form>
+            </div>
+</div>
+     </div>
+ </div>
+
+    <footer>
+        <p>&copy; 2024 Fikreyohannes. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");  
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}  
+    </script>
+
+</body>
+</html>
